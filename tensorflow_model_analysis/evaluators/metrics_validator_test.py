@@ -24,6 +24,8 @@ from tensorflow_model_analysis.slicer import slicer_lib as slicer
 from tensorflow_model_analysis.utils import test_util
 from google.protobuf import text_format
 
+import pytest
+
 # Tests involiving slices: (<test_name>, <slice_config> , <slice_key>)
 _NO_SLICE_TEST = ('no_slice', None, (()))
 _GLOBAL_SLICE_TEST = ('global_slice', [config_pb2.SlicingSpec()], (()))
@@ -135,6 +137,7 @@ _UNMATCHED_CROSS_SLICE_TEST = (
 )
 
 
+@pytest.mark.usefixtures("v2_behavior")
 class MetricsValidatorTest(
     test_util.TensorflowModelAnalysisTest, parameterized.TestCase
 ):

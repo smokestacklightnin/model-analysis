@@ -35,6 +35,8 @@ from tfx_bsl.tfxio import test_util as tfx_bsl_test_util
 from google.protobuf import text_format
 from tensorflow_metadata.proto.v0 import schema_pb2
 
+import pytest
+
 
 class IdentityParsingLayer(tf_keras.layers.Layer):
   """A Kears layer which performs parsing and returns a single tensor."""
@@ -50,7 +52,7 @@ class IdentityParsingLayer(tf_keras.layers.Layer):
     )
     return parsed[self._feature_key]
 
-
+@pytest.mark.usefixtures("v2_behavior")
 class CounterfactualPredictionsExtactorTest(
     test_util.TensorflowModelAnalysisTest, parameterized.TestCase
 ):

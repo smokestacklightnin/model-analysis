@@ -32,6 +32,8 @@ from google.protobuf import text_format
 from tensorflow.core.protobuf import saved_model_pb2  # pylint: disable=g-direct-tensorflow-import
 from tensorflow_metadata.proto.v0 import schema_pb2
 
+import pytest
+
 _TF_MAJOR_VERSION = int(tf.version.VERSION.split('.')[0])
 
 
@@ -45,6 +47,7 @@ def _record_batch_to_extracts(record_batch):
   }
 
 
+@pytest.mark.usefixtures("v2_behavior")
 class ModelUtilTest(
     test_util.TensorflowModelAnalysisTest, parameterized.TestCase
 ):

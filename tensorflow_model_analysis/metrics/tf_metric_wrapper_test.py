@@ -25,6 +25,8 @@ from tensorflow_model_analysis.proto import config_pb2
 from tensorflow_model_analysis.utils import test_util
 from tensorflow_model_analysis.utils.keras_lib import tf_keras
 
+import pytest
+
 
 class _CustomMetric(tf_keras.metrics.Mean):
 
@@ -67,6 +69,7 @@ class _CustomMeanSquaredError(tf_keras.metrics.MeanSquaredError):
     return {'mse': mse, 'one_minus_mse': 1 - mse}
 
 
+@pytest.mark.usefixtures("v2_behavior")
 class ConfusionMatrixMetricsTest(
     test_util.TensorflowModelAnalysisTest, parameterized.TestCase
 ):
@@ -488,7 +491,7 @@ class ConfusionMatrixMetricsTest(
 
       util.assert_that(result, check_result, label='result')
 
-
+@pytest.mark.usefixtures("v2_behavior")
 class NonConfusionMatrixMetricsTest(
     test_util.TensorflowModelAnalysisTest, parameterized.TestCase
 ):
@@ -1039,7 +1042,7 @@ class NonConfusionMatrixMetricsTest(
     mse_key = metric_types.MetricKey(name='mse', example_weighted=True)
     self.assertDictElementsAlmostEqual(got_metrics, {mse_key: 0.1875})
 
-
+@pytest.mark.usefixtures("v2_behavior")
 class MixedMetricsTest(test_util.TensorflowModelAnalysisTest):
 
   def testWithMixedMetrics(self):

@@ -27,12 +27,15 @@ from tensorflow_model_analysis.metrics import metric_util
 from tensorflow_model_analysis.metrics import test_util as metric_test_util
 from tensorflow_model_analysis.utils import test_util
 
+import pytest
+
 
 _TF_MAJOR_VERSION = int(tf.version.VERSION.split('.')[0])
 _TRUE_POISITIVE = (1, 1)
 _TRUE_NEGATIVE = (0, 0)
 
 
+@pytest.mark.usefixtures("v2_behavior")
 class ConfusionMatrixMetricsTest(
     test_util.TensorflowModelAnalysisTest,
     metric_test_util.TestCase,

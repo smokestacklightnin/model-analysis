@@ -33,6 +33,8 @@ from tfx_bsl.tfxio import test_util
 from google.protobuf import text_format
 from tensorflow_metadata.proto.v0 import schema_pb2
 
+import pytest
+
 _TF_MAJOR_VERSION = int(tf.version.VERSION.split('.')[0])
 
 _MULTI_MODEL_CASES = [False, True]
@@ -53,6 +55,7 @@ def random_genenerator():
     yield r
 
 
+@pytest.mark.usefixtures("v2_behavior")
 class TFLitePredictExtractorTest(
     testutil.TensorflowModelAnalysisTest, parameterized.TestCase
 ):

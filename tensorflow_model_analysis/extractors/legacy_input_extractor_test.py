@@ -23,7 +23,10 @@ from tensorflow_model_analysis.eval_saved_model import testutil
 from tensorflow_model_analysis.extractors import legacy_input_extractor as input_extractor
 from tensorflow_model_analysis.proto import config_pb2
 
+import pytest
 
+
+@pytest.mark.usefixtures("v2_behavior")
 class InputExtractorTest(testutil.TensorflowModelAnalysisTest):
 
   def testInputExtractor(self):
