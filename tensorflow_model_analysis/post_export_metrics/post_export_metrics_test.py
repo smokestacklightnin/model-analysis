@@ -3194,6 +3194,3 @@ class PostExportMetricsTest(testutil.TensorflowModelAnalysisTest):
         custom_metrics_check=check_result)
 
 
-if __name__ == '__main__':
-  tf.compat.v1.enable_eager_execution()
-  tf.test.main()

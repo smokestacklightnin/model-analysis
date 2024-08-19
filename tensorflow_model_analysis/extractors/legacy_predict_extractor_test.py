@@ -308,5 +308,3 @@ class PredictExtractorTest(
       util.assert_that(predict_extracts, check_result, label='result')
 
 
-if __name__ == '__main__':
-  tf.test.main()

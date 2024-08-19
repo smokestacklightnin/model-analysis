@@ -202,5 +202,3 @@ class BuildAnalysisTableTest(testutil.TensorflowModelAnalysisTest):
       util.assert_that(result[constants.ANALYSIS_KEY], check_result)
 
 
-if __name__ == '__main__':
-  tf.test.main()

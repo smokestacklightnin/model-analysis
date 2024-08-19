@@ -78,5 +78,3 @@ class ModelAgnosticExtractorTest(test_util.TensorflowModelAnalysisTest):
       util.assert_that(fpl_extracts, check_result)
 
 
-if __name__ == '__main__':
-  tf.test.main()

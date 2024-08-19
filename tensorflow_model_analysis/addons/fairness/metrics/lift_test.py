@@ -387,5 +387,3 @@ class LiftTest(testutil.TensorflowModelAnalysisTest, parameterized.TestCase):
       )
 
 
-if __name__ == '__main__':
-  tf.test.main()

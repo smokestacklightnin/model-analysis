@@ -484,5 +484,3 @@ class FairnessIndicatorsTest(
 
 # TODO: b/147497357 - Add counter test once we have counter setup.
 
-if __name__ == '__main__':
-  tf.test.main()

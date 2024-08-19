@@ -207,5 +207,3 @@ class TFMAUnitTest(tfma_unit.TestCase):
       )
 
 
-if __name__ == '__main__':
-  tf.test.main()

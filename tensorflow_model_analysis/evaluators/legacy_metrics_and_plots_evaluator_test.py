@@ -564,5 +564,3 @@ class EvaluateMetricsAndPlotsTest(testutil.TensorflowModelAnalysisTest):
       util.assert_that(plots, check_plots, label='plots')
 
 
-if __name__ == '__main__':
-  tf.test.main()
