@@ -19,10 +19,8 @@ from tensorflow_model_analysis.metrics import tf_metric_accumulators
 from tensorflow_model_analysis.proto import config_pb2
 from tensorflow_model_analysis.utils import test_util
 
-import pytest
 
 
-@pytest.mark.usefixtures("v2_behavior")
 class TfMetricAccumulatorsTest(test_util.TensorflowModelAnalysisTest):
 
   def testTFMetricsAccumulator(self):

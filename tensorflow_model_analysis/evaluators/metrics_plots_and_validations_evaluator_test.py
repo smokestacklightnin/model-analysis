@@ -56,7 +56,6 @@ from tfx_bsl.tfxio import test_util
 from google.protobuf import text_format
 from tensorflow_metadata.proto.v0 import schema_pb2
 
-import pytest
 
 
 _TF_MAJOR_VERSION = int(tf.version.VERSION.split('.')[0])
@@ -75,7 +74,6 @@ def _addExampleCountMetricCallback(  # pylint: disable=invalid-name
   return metric_ops
 
 
-@pytest.mark.usefixtures("v2_behavior")
 class MetricsPlotsAndValidationsEvaluatorTest(
     testutil.TensorflowModelAnalysisTest, parameterized.TestCase
 ):

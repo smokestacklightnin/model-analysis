@@ -29,10 +29,8 @@ from tfx_bsl.tfxio import test_util
 from google.protobuf import text_format
 from tensorflow_metadata.proto.v0 import schema_pb2
 
-import pytest
 
 
-@pytest.mark.usefixtures("v2_behavior")
 class MaterializedPredictionsExtractorTest(
     testutil.TensorflowModelAnalysisTest
 ):

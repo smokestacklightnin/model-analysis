@@ -54,7 +54,6 @@ from tfx_bsl.tfxio import test_util
 from google.protobuf import text_format
 from tensorflow_metadata.proto.v0 import schema_pb2
 
-import pytest
 
 
 def _make_slice_key(*args):
@@ -68,7 +67,6 @@ def _make_slice_key(*args):
   return result
 
 
-@pytest.mark.usefixtures("v2_behavior")
 class MetricsPlotsAndValidationsWriterTest(testutil.TensorflowModelAnalysisTest,
                                            parameterized.TestCase):
 

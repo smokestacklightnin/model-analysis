@@ -25,10 +25,8 @@ from tensorflow_model_analysis.utils import util
 
 from tensorflow_metadata.proto.v0 import schema_pb2
 
-import pytest
 
 
-@pytest.mark.usefixtures("v2_behavior")
 class UtilTest(tf.test.TestCase, parameterized.TestCase):
 
   def testToTensorValueFromTFSparseTensor(self):

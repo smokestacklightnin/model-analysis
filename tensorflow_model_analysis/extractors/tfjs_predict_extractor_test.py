@@ -31,7 +31,6 @@ from tfx_bsl.tfxio import test_util
 from google.protobuf import text_format
 from tensorflow_metadata.proto.v0 import schema_pb2
 
-import pytest
 
 try:
   from tensorflowjs.converters import converter  # pylint: disable=g-import-not-at-top
@@ -41,7 +40,6 @@ except ModuleNotFoundError:
   _TFJS_IMPORTED = False
 
 
-@pytest.mark.usefixtures("v2_behavior")
 class TFJSPredictExtractorTest(
     testutil.TensorflowModelAnalysisTest, parameterized.TestCase
 ):

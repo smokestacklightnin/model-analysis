@@ -46,7 +46,6 @@ from google.protobuf import wrappers_pb2
 from google.protobuf import text_format
 from tensorflow_metadata.proto.v0 import schema_pb2
 
-import pytest
 
 try:
   import tensorflow_ranking as tfr  # pylint: disable=g-import-not-at-top
@@ -67,7 +66,6 @@ _TEST_SEED = 982735
 _TF_MAJOR_VERSION = int(tf.version.VERSION.split('.')[0])
 
 
-@pytest.mark.usefixtures("v2_behavior")
 class EvaluateTest(
     test_util.TensorflowModelAnalysisTest, parameterized.TestCase
 ):
