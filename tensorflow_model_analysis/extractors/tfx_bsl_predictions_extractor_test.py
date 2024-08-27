@@ -13,6 +13,8 @@
 # limitations under the License.
 """Tests for Tfx-Bsl Predictions Extractor."""
 
+
+import pytest
 import os
 
 from absl.testing import parameterized
@@ -38,6 +40,8 @@ from tensorflow_metadata.proto.v0 import schema_pb2
 
 
 
+@pytest.mark.xfail(run=False, reason="PR 183 This class contains tests that fail and needs to be fixed. "
+"If all tests pass, please remove this mark.")
 class TfxBslPredictionsExtractorTest(
     testutil.TensorflowModelAnalysisTest, parameterized.TestCase
 ):

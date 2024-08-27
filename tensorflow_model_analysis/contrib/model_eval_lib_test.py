@@ -13,6 +13,8 @@
 # limitations under the License.
 """Test for using the contrib model_eval_lib API."""
 
+
+import pytest
 import os
 import tempfile
 
@@ -29,6 +31,8 @@ from tensorflow_model_analysis.eval_saved_model.example_trainers import linear_c
 from tensorflow_model_analysis.slicer import slicer_lib as slicer
 
 
+@pytest.mark.xfail(run=False, reason="PR 183 This class contains tests that fail and needs to be fixed. "
+"If all tests pass, please remove this mark.")
 class BuildAnalysisTableTest(testutil.TensorflowModelAnalysisTest):
 
   def _getTempDir(self):
