@@ -407,5 +407,3 @@ class TfxBslPredictionsExtractorTest(testutil.TensorflowModelAnalysisTest):
     self.assertEqual(extracts['foo']['bar'], ref_extracts['foo']['bar'])
 
 
-if __name__ == '__main__':
-  tf.test.main()

@@ -513,6 +513,3 @@ class PredictionsExtractorTest(
       util.assert_that(result, check_result)
 
 
-if __name__ == '__main__':
-  tf.compat.v1.enable_v2_behavior()
-  tf.test.main()

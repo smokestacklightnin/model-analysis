@@ -170,5 +170,3 @@ class NDCGMetricsTest(
       util.assert_that(result, check_result, label='result')
 
 
-if __name__ == '__main__':
-  tf.test.main()

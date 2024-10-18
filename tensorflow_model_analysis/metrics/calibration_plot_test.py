@@ -440,5 +440,3 @@ class CalibrationPlotTest(
     self.assertEqual(expected_range, histogram.combiner._range)
 
 
-if __name__ == '__main__':
-  tf.test.main()
